@@ -4,7 +4,7 @@
 :root {
   --font-family: "Roboto", sans-serf;
   --normal-font: 400;
-  --bold-font: 700;
+  --bold-font: 600;
   --bolder-font: 900;
   --bg-color: #f4f4f4;
   --primary-color: #4756df;
@@ -93,25 +93,32 @@ nav ul li {
 }
 
 .short-intro img {
-  height: 25rem;
-  width: 25rem;
+  margin: 2rem;
+  height: 15rem;
+  width: 15rem;
 }
 
 .bio {
-  width: 25rem;
+  margin: 1rem;
+  width: 28rem;
   padding: 0.625rem;
   border-radius: 6px;
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
 }
 
 .bio h2 {
-  text-align: center;
   margin-bottom: var(--bottom-margin);
+  font-size: 1.3rem;
 }
 
 .bio p {
   line-height: var(--line-height);
   padding: 0.3rem 0;
+}
+
+.bio span {
+  color: var(--primary-color);
+  font-weight: var(--bolder-font);
 }
 
 /* Continued about section */
@@ -169,9 +176,9 @@ nav ul li {
 /* Projects Section */
 
 .projects {
-  background-color: var(--bg-color);
   padding: 32px 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .projects h2 {
@@ -196,10 +203,15 @@ nav ul li {
 }
 
 .project-container {
+  display: flex;
   text-align: center;
   width: 50rem;
   padding: 1rem;
   transition: transform 0.2s linear;
+}
+
+.project-container img {
+  width: 15rem;
 }
 
 .project-container:hover {
@@ -208,10 +220,6 @@ nav ul li {
 
 .project-container p {
   padding: 0.4rem;
-}
-
-.project-title {
-  margin-bottom: var(--bottom-margin);
 }
 
 .project-details {
