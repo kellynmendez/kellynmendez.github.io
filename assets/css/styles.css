@@ -138,6 +138,23 @@ nav ul li {
   padding: 0.4rem;
 }
 
+.contact {
+  padding: 1rem 6rem;
+}
+
+.contact h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.contact-card {
+  margin: 1rem;
+  width: 8rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
 /* Skills Section */
 
 .skills {
@@ -226,3 +243,48 @@ nav ul li {
 }
 
 /* Contact Section */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+}
+
+.content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.email {
+  margin-bottom: 0.5rem;
+  color: var(--bg-color);
+}
+
+.social-footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--primary-color);
+}
+
+footer ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.fa {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--bg-color);
+}
+
+.fa:hover {
+  color: var(--secondary-color);
+}
