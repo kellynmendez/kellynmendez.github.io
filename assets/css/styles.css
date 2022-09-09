@@ -260,11 +260,6 @@ footer {
   min-height: 100vh;
 }
 
-.email {
-  margin-bottom: 0.5rem;
-  color: var(--bg-color);
-}
-
 .social-footer {
   display: flex;
   text-align: center;
