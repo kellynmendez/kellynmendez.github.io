@@ -81,6 +81,15 @@ nav ul li {
   font-weight: var(--bold-font);
 }
 
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
 /* Short Intro and Headshot section */
 
 .short-intro { /* contains image and bio */
@@ -125,7 +134,7 @@ nav ul li {
 
 .more-about {
   background-color: var(--bg-color);
-  padding: 1rem 6rem;
+  padding: 1rem 3rem;
 }
 
 .more-about h2 {
@@ -234,15 +243,13 @@ nav ul li {
 
 /* Project Pages */
 video {
-  /* override other styles to make responsive */
-  width: 100%    !important;
-  height: auto   !important;
+  width: 100%;
+  height: auto;
 }
 
 .single-proj {
   display: flex;
   justify-content: center;
-  text-align: center;
   flex-direction: column;
   padding-bottom: 1rem;
   padding-top: 1rem;
@@ -308,10 +315,6 @@ footer ul {
 /* phone stuff */
 
 @media screen and (max-width: 720px) {
-  .short-intro
-  {
-    flex-direction: column;
-  }
 
   nav {
     padding: 1.5rem 1rem;
@@ -329,7 +332,72 @@ footer ul {
     transition: transform 0.5s ease-in;
   }
 
-   nav ul li {
-    margin: 8px;
+  nav ul li {
+    margin-bottom: 18px;
   }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+
+  .short-intro
+  {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .bio {
+    width: 18rem;
+  }
+
+  .more-about {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .more-about h2 {
+    text-align: center;
+  }
+
+  .more-about p {
+    text-align: justify;
+  }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .project-details a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .single-proj {
+    margin-top: -2rem;
+    padding: 1rem 2rem;
+  }
+
+  .single-proj h1 {
+    text-align: center;
+  }
+
+  .single-proj p {
+    text-align: justify;
+  }
+  
 }
