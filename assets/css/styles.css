@@ -291,7 +291,7 @@ footer {
 
 footer ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.7rem;
 }
 
 .fa {
@@ -303,4 +303,13 @@ footer ul {
 
 .fa:hover {
   color: var(--secondary-color);
+}
+
+/* phone stuff */
+@media (max-width: 900px)
+{
+  .short-intro
+  {
+    flex-direction: column;
+  }
 }
