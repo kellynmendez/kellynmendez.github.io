@@ -306,10 +306,30 @@ footer ul {
 }
 
 /* phone stuff */
-@media (max-width: 900px)
-{
+
+@media screen and (max-width: 720px) {
   .short-intro
   {
     flex-direction: column;
+  }
+
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+   nav ul li {
+    margin: 8px;
   }
 }
