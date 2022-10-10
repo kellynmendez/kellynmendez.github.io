@@ -33,11 +33,22 @@
           <source src="/assets/videos/fleabag.mp4" type="video/mp4">
         </video>
         <p>
-          ***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS
-          ***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS
-          ***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS
-          ***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS
-          ***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS***FINISH WRITING THIS
+          This game was made for the Student Game Developer Association's 40-hour game jam in Spring 2022,
+          where the theme was "One's Trash is Another's Treasure." Our game won the award for "Best Audio."
+          In <i>Fleabag</i>, you play as a racoon that has to collect as much trash as possible before being
+          killed by the hordes of rats. You also have the option to light a trash can instead of loot it, and
+          lighting a trash can will keep rats away from you until the trash can burns out.
+          <br><br>
+          For this game, I had a hand in programming everything except for the enemy AI of the rats, but I would say my
+          two biggest contributions were programming the UI as well as player behavior.
+          <br><br>
+          As an overview in regards to player behavior, the racoon had to be able to move into position in front of a trash can then dig through it
+          whenever a button was held down. To do this, I had to account for how to choose the trach can when the racoon
+          is within the collider of multiple trash cans at once, and I had to lock all controls while the racoon is digging.
+          To accomplish this, the player controller script uses states to know when the racoon is digging or not, and it keeps
+          a list of trash bins that the racoon is within range of, so when the button for digging is held, it calculates the
+          closest trash can and uses coroutines to move the racoon in front of the trash can and start the digging time. The
+          trash cans themselves also have a state machine set up to move them between ready, looting/lit, and recharging states.
         </p>
       </section>
       <!-- Footer -->

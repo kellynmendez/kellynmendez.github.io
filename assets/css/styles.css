@@ -336,10 +336,38 @@ video {
   text-align: center;
 }
 
+.single-proj h2 {
+  font-family: var(--font-family-1);
+  font-size: 1.8rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.single-proj h3 {
+  font-family: var(--font-family-1);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
 .single-proj p {
   font-family: var(--font-family-2);
   line-height: var(--line-height);
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
+}
+
+.single-proj .center-text p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem 1rem;
+}
+
+.single-proj-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 1rem 3rem 1rem;
+  width: 50%;
 }
 
 /* Footer Contact Section */
@@ -451,6 +479,26 @@ footer ul {
     align-items: center;
     text-align: center;
     padding: 1rem;
+  }
+
+  .proj-skills-container {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+
+  .proj-skills-card {
+    padding: 0.4rem;
+    margin: 1rem 0.5rem 0rem 1rem;
+    width: 4rem;
+    font-size: 0.6rem;
+  }
+
+  .large-proj-skills-card {
+    width: 6rem;
   }
 
   .project-details a {
