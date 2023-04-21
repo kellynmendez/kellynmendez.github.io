@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <title>Kellyn Mendez</title>
+
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div class="content-wrap">
+        <!-- Navbar -->
+        <nav>
+          <h1>Kellyn Mendez</h1>
+          <ul class="navigation">
+            <li><a href="/index.html" class="nav-link">About</a></li>
+            <!--<li><a href="/resume.html" class="nav-link">Resume</a></li>-->
+            <li><a href="/projects.html" class="nav-link">Projects</a></li>
+          </ul>
+          <button class="burger-menu" id="burger-menu">
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+          </button>
+        </nav>
+      </div>
+      <section class="single-proj">
+        <h1>UTD Animation Lab</h1>
+        <p>
+          Animation lab is a course UTD offers in which a group of around fifty students make an animated short over the
+          course of two semesters. The course is designed to simulate an animation studio, including a pipeline that
+          was created a few years ago which manages file access and sharing throughout every stage of the pipeline.
+          The project I am currently working on is called Red Hat Ringo, a western-themed animated short, and since I joined
+          in August of 2022, I've worked on one other project, Bad Timing, a monster-themed animated short which premiered in 
+          December of 2022.
+          <br></br>
+          <a href="https://atec-animgames.com/anim-lab">Click here to learn more about animation lab.</a>
+        </p>
+        <h2>Bad Timing</h2>
+        <img
+        src="/assets/images/bad-timing-title.png"
+        alt="bad-timing-title"
+        loading="lazy"
+        class="single-proj-img"
+        />
+        <p>
+          I joined Bad Timing for the second semester of its production, so the main focus for the semester was surfacing, 
+          rigging, animation, and lighting. Jumping straight into pipeline management with only a semester of previous
+          tools development experience was very challenging; my teammate and I were given the code for the main modules, and 
+          we spent a majority of our time for the first semester learning and experimenting with the pipeline.
+          We mostly focused on troubleshooting problems and bugs that artists ran into, especially for the last few weeks to get the final
+          short ready for the premiere.
+          <br></br>
+          Beyond just troubleshooting, my teammate and I also worked on a way for surfacing artists to work locally. One of the
+          artists' biggest recurring problems is our network drive due to how slow it is to access files work on 
+          pipe. As a result, previous technical directors worked on ways to download files from the network so artists
+          could work on them locally then have them version back up to the network when they finish working. This workflow is much
+          simpler for a discipline like modeling, but with surfacing it was a little more involved because we needed to take into
+          account file dependencies and handle the workflow accordingly.
+          <br></br>
+          <a href="https://atec-animgames.com/badtiming">Click here to learn more about Bad Timing.</a>
+        </p>
+        <h2>Red Hat Ringo</h2>
+        <img
+        src="/assets/images/red-hat-ringo.jpg"
+        alt="bad-timing-title"
+        loading="lazy"
+        class="single-proj-img"
+        />
+        <p>
+          Work on Red Hat Ringo began in January of 2023, and my main since the project started has been creating
+          a workflow for layout that uses Universal Scene Description (USD), a recently released software platform developed by Pixar
+          that manages 3D animation data efficiently, to handle managing layouts and set dressing. I was tasked with designing a way for
+          layout artists to assemble a set using USD rather than the old assembly workflow, and I did this by automating essential parts
+          of the USD pipeline and creating a tool artists could use to easily manage the USD data in their layout:
+        </p>
+        <img
+        src="/assets/images/usd-manager.png"
+        alt="usd-manager-gui"
+        loading="lazy"
+        class="single-proj-img"
+        />
+        <p>
+          After modeling publishes their work, they click a button to generate supporting assembly files, which includes exporting the proxy (and render,
+          if it exists) versions of the model to USD and storing them on the network. When a layout artist first opens an assembly asset, a 
+          base USD file named after the asset is created and the artist can import it into their scene, then use the tool to make
+          the layout sublayer if they would like to add opinions. The tool queries ShotGrid to gather project data and assemble 
+          a list of all assets in the project, with icons that indicate whether layout is able to pull in the asset. Green icons
+          indicate that the asset's USD file exists on the network so the artist can therefore import the asset into their layout, red icons indicate
+          that the asset cannot be imported, and yellow icons indicate an assembly asset. The artist can check the assets they want to import into
+          the layout, which creates a prim with a USD reference, check the prims they would like to remove, and choose to reload the USD 
+          if they would like to reload any changes made to any USD references while they were working with it.
+        </p>
+        <img
+        src="/assets/images/usd-layer-editor.png"
+        alt="usd-layer-editor"
+        loading="lazy"
+        class="single-proj-img"
+        />
+        <p>
+          The above image shows the USD layer editor and how sublayers can be used in the USD workflow. In the outliner, you can also see
+          the prims that were imported into the base USD, as well as the base prim 'contents' that holds the entire layout, which allows other
+          assemblies to be able to import this assembly as a prim in their layout.
+          <br></br>
+          I am also currently working on extending the USD workflow to Unreal because we decided to switch from Arnold to Unreal 5.1 for Red Hat Ringo
+          and all future projects. I added the same tool shown above in the Unreal workflow easily since USD is universal, and I am currently
+          working on extending the workflow to implement surfacing on USD assets in Unreal.
+        </p>
+      </section>
+      <!-- Footer -->
+      <footer class="social-footer">
+        <div class="social-footer-icons">
+          <ul>
+            <li><a href="mailto:kpm.mendez@gmail.com" class="fa fa-envelope"></a></li>
+            <li><a href="https://linkedin.com/in/kellyn-mendez" class="fa fa-linkedin"></a></li>
+            <li><a href="https://github.com/kellynmendez" class="fa fa-github"></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- Website scripts -->
+    <script src="/assets/js/app.js"></script>
+    <!-- Ion icons scripts -->
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
