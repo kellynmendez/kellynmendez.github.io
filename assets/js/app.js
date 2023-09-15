@@ -17,3 +17,8 @@ navLink.forEach((link) =>
     ul.classList.remove("show");
   })
 );
+
+// For clicking a project card in project page
+function openPage(pageUrl){
+  window.location.href=pageUrl;
+}

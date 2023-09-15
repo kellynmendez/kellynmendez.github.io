@@ -222,6 +222,7 @@ nav ul li {
   padding: 20px;
   margin: 10px;
   transition: transform 0.2s linear;
+  cursor: pointer;
 }
 
 .project-details h3 {
@@ -294,11 +295,11 @@ nav ul li {
   transform: translateY(-4px);
 }
 
-.proj-skills-card:hover {
+/* .proj-skills-card:hover {
   border: 1.5px solid var(--primary-color);
   color: white;
   background-color: var(--primary-color);
-}
+} */
 
 .project-details {
   margin-bottom: var(--bottom-margin);
@@ -314,8 +315,10 @@ nav ul li {
 
 /* Project Pages */
 video {
-  width: 100%;
+  width: 80%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .single-proj {
@@ -339,7 +342,7 @@ video {
 .single-proj h2 {
   font-family: var(--font-family-1);
   font-size: 1.8rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   text-align: center;
 }
 
@@ -347,13 +350,29 @@ video {
   font-family: var(--font-family-1);
   font-size: 1.2rem;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 1rem;
 }
 
 .single-proj p {
   font-family: var(--font-family-2);
   line-height: var(--line-height);
   padding: 3rem 1rem;
+}
+
+.single-proj figure {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-proj figcaption {
+  font-family: var(--font-family-2);
+  font-size: 0.9rem;
+  text-align: center;
+  font-style: italic;
+  padding: 0rem 1rem;
 }
 
 .single-proj .center-text p {
@@ -366,7 +385,6 @@ video {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5rem rem 3rem 1rem;
   width: 50%;
 }
 
@@ -501,13 +519,6 @@ footer ul {
     width: 6rem;
   }
 
-  .project-details a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-  }
-
   .single-proj {
     margin-top: -2rem;
     padding: 1rem 2rem;
@@ -519,6 +530,11 @@ footer ul {
 
   .single-proj p {
     text-align: justify;
+  }
+
+  .single-proj-img {
+    display: block;
+    width: 75%;
   }
   
 }
