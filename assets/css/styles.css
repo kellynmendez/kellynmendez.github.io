@@ -313,6 +313,10 @@ nav ul li {
   font-family: var(--font-family-4);
 }
 
+.repo-link {
+  justify-content: center;
+}
+
 /* Project Pages */
 video {
   width: 80%;
