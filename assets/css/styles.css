@@ -392,6 +392,13 @@ video {
   width: 25rem;
 }
 
+.environment-proj-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
 /* Footer Contact Section */
 
 footer {
@@ -537,6 +544,11 @@ footer ul {
   }
 
   .single-proj-img {
+    display: block;
+    width: 75%;
+  }
+
+  .environment-proj-img {
     display: block;
     width: 75%;
   }
