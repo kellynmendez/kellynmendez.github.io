@@ -352,15 +352,21 @@ video {
 
 .single-proj h3 {
   font-family: var(--font-family-1);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
-  padding: 1rem 1rem;
+  padding: 1rem 2rem;
 }
 
 .single-proj p {
   font-family: var(--font-family-2);
   line-height: var(--line-height);
   padding: 3rem 1rem;
+}
+
+.single-proj li {
+  font-family: var(--font-family-2);
+  line-height: var(--line-height);
+  padding: 0.2rem;
 }
 
 .single-proj figure {

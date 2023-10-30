@@ -45,25 +45,54 @@
           a workflow for layout that uses Universal Scene Description (USD), a recently released software platform developed by Pixar
           that manages 3D animation data efficiently, to handle managing layouts and set dressing. I was tasked with designing a way for
           layout artists to assemble a set using USD rather than the old assembly workflow, and I did this by automating essential parts
-          of the USD pipeline and creating a tool artists could use to easily manage the USD data in their layout:
+          of the USD pipeline and creating a tool artists could use to easily manage the USD data in their layout.
         </p>
-        <img
-        src="/assets/images/usd-manager.png"
-        alt="usd-manager-gui"
-        loading="lazy"
-        class="single-proj-img"
-        />
-        <p>
-          After modeling publishes their work, they click a button to generate supporting assembly files, which includes exporting the proxy (and render,
-          if it exists) versions of the model to USD and storing them on the network. When a layout artist first opens an assembly asset, a 
-          base USD file named after the asset is created and the artist can import it into their scene, then use the tool to make
-          the layout sublayer if they would like to add opinions. The tool queries ShotGrid to gather project data and assemble 
-          a list of all assets in the project, with icons that indicate whether layout is able to pull in the asset. Green icons
-          indicate that the asset's USD file exists on the network so the artist can therefore import the asset into their layout, red icons indicate
-          that the asset cannot be imported, and yellow icons indicate an assembly asset. The artist can check the assets they want to import into
-          the layout, which creates a prim with a USD reference, check the prims they would like to remove, and choose to reload the USD 
-          if they would like to reload any changes made to any USD references while they were working with it.
-        </p>
+        <h3>Overview of Pipeline Steps</h3>
+        <ol type="1">
+          <li style="padding-left:10px">The modeling team publishes their work which creates the supporting assembly files. Creating the 
+            supporting assembly files exports the proxy (and render, if it exists) versions of the model to USD and stores them on the network.</li> 
+          <li style="padding-left:10px">When a layout artist first opens an assembly asset, a base USD file named after the asset is 
+            created and is imported into their Maya scene. When the base USD is created:</li> 
+          <ol type="a">
+            <li style="margin-left: 50px; padding-left:10px">The USD kind is set to assembly. This is done so that the layout can be imported 
+              into another layout in the future if needed.</li> 
+            <li style="margin-left: 50px; padding-left:10px">A prim named ‘contents’ is created and set to be the default prim for the USD. 
+              All assets in the future are automatically imported into the contents prim.</li>
+          </ol>
+          <li style="padding-left:10px">The layout artist uses the USD Manager tool to add and remove assets to the USD, then they can 
+            move them around as needed.</li>
+          <br></br>
+          <img
+          src="/assets/images/usd-manager.png"
+          alt="usd-manager-gui"
+          loading="lazy"
+          class="single-proj-img"
+          />
+          <br></br>
+          <ol type="a">
+            <li style="margin-left:50px; padding-left:10px">The tool queries ShotGrid to gather project data and assemble a list of all a
+              ssets in the project, with icons that indicate whether layout is able to pull in the asset.</li>
+            <ol type="i">
+              <li style="margin-left:100px; padding-left:10px">Green icons indicate that the asset's USD file exists on the network so 
+                the artist can therefore import the asset into their layout.</li> 
+              <li style="margin-left:100px; padding-left:10px">Red icons indicate that the asset cannot be imported.</li> 
+              <li style="margin-left:100px; padding-left:10px">Yellow icons indicate an assembly asset.</li> 
+            </ol>
+            <li style="margin-left:50px; padding-left:10px">The artist can check the assets they want to import into the layout (Import 
+              Checked Assets).</li>
+            <ol type="i">
+              <li style="margin-left:100px; padding-left:10px">When they import an asset, it creates a prim with a USD reference.</li> 
+            </ol>
+            <li style="margin-left:50px; padding-left:10px">The artist can check the assets they want to remove from the layout 
+              (Remove Checked Assets).</li>
+            <li style="margin-left:50px; padding-left:10px">The artist can choose to reload the USD if they would like to reload any 
+              changes made to any USD references while they were working with it (Reload All Assets).</li>
+          </ol>
+          <li style="padding-left:10px">From here, the USD can be pulled into Animation’s shots in Maya as well as into Lighting’s 
+            shots in Unreal (our pipeline has departments working between Unreal and Maya). This same tool shown above also exists in the Unreal workflow since artists are able to open and edit assets in both Maya and Unreal in our pipeline.</li> 
+        </ol>
+        <br></br>
+        <h3>Layers</h3>
         <img
         src="/assets/images/usd-layer-editor.png"
         alt="usd-layer-editor"
@@ -71,13 +100,8 @@
         class="single-proj-img"
         />
         <p>
-          The above image shows the USD layer editor and how sublayers can be used in the USD workflow. In the outliner, you can also see
-          the prims that were imported into the base USD, as well as the base prim 'contents' that holds the entire layout, which allows other
-          assemblies to be able to import this assembly as a prim in their layout.
-          <br></br>
-          I am also currently working on extending the USD workflow to Unreal because we decided to switch from Arnold to Unreal 5.1 for Red Hat Ringo
-          and all future projects. I added the same tool shown above in the Unreal workflow easily since USD is universal, and I am currently
-          working on extending the workflow to implement surfacing on USD assets in Unreal.
+          The above image shows the USD layer editor and how sublayers can be used in the USD workflow. In the outliner, you can see the prims that were imported into the base USD, as well as the base prim 'contents' that holds the entire layout.
+          Whenever an artist imports an asset into the USD, it automatically makes those changes in the base layer, which contains the initial layout. If an artist makes any changes to the layout that is not included in the initial layout, they choose a different layer based on their department.          
         </p>
         <h2>About Bad Timing</h2>
         <!-- <img
