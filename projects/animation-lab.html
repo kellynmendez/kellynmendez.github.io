@@ -52,13 +52,19 @@
           <li style="padding-left:10px">The modeling team publishes their work which creates the supporting assembly files. Creating the 
             supporting assembly files exports the proxy (and render, if it exists) versions of the model to USD and stores them on the network.</li> 
           <li style="padding-left:10px">When a layout artist first opens an assembly asset, a base USD file named after the asset is 
-            created and is imported into their Maya scene. When the base USD is created:</li> 
+            created and to be imported into their Maya scene. When the base USD is created:</li> 
           <ol type="a">
             <li style="margin-left: 50px; padding-left:10px">The USD kind is set to assembly. This is done so that the layout can be imported 
               into another layout in the future if needed.</li> 
             <li style="margin-left: 50px; padding-left:10px">A prim named ‘contents’ is created and set to be the default prim for the USD. 
               All assets in the future are automatically imported into the contents prim.</li>
           </ol>
+          <img
+          src="/assets/images/usd-code/create-usd-code.png"
+          alt="create-usd-code"
+          loading="lazy"
+          class="code-img"
+          />
           <li style="padding-left:10px">The layout artist uses the USD Manager tool to add and remove assets to the USD, then they can 
             move them around as needed.</li>
           <br></br>
@@ -83,8 +89,20 @@
             <ol type="i">
               <li style="margin-left:100px; padding-left:10px">When they import an asset, it creates a prim with a USD reference.</li> 
             </ol>
+            <img
+            src="/assets/images/usd-code/import-asset-code.png"
+            alt="import-asset-code"
+            loading="lazy"
+            class="code-img"
+            />
             <li style="margin-left:50px; padding-left:10px">The artist can check the assets they want to remove from the layout 
               (Remove Checked Assets).</li>
+            <img
+            src="/assets/images/usd-code/remove-asset-code.png"
+            alt="remove-asset-code"
+            loading="lazy"
+            class="code-img"
+            />
             <li style="margin-left:50px; padding-left:10px">The artist can choose to reload the USD if they would like to reload any 
               changes made to any USD references while they were working with it (Reload All Assets).</li>
           </ol>
