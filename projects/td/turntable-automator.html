@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <title>Kellyn Mendez</title>
+
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div class="content-wrap">
+        <!-- Navbar -->
+        <nav>
+          <h1>Kellyn Mendez</h1>
+          <ul class="navigation">
+            <li><a href="/about.html" class="nav-link">About</a></li>
+            <!--<li><a href="/resume.html" class="nav-link">Resume</a></li>-->
+            <li><a href="/index.html" class="nav-link">Projects</a></li>
+          </ul>
+          <button class="burger-menu" id="burger-menu">
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+          </button>
+        </nav>
+      </div>
+      <section class="single-proj padding">
+        <h1>Turntable Automator</h1>
+        <video width="320" height="240" controls autoplay loop>
+          <source src="/assets/videos/turntable-demo.mp4" type="video/mp4">
+        </video>
+        <p>
+          I automated the creation of a turntable for an asset for both modeling and surfacing. This tool
+          first reads an XML file that has pre-set settings for the turntable. In this, for each discipline,
+          there are two different quality options, either low or high quality. The tool will show either
+          the modeling settings or the surfacing settings depending on the discipline in which the asset was 
+          opened. At any point, the XML file can be changed to have new settings and these will automatically 
+          apply to the turntable. <br></br>
+          <img
+          src="/assets/images/turntable/xml-settings.png"
+          alt="xml-settings"
+          loading="lazy"
+          class="single-proj-img"
+          />
+        </p>
+        <h2>Artist Steps to Create</h2>
+        <p>
+            After opening the asset the artist wants to create a turntable for, they can open the turntable tool from
+            within our pipeline and choose the quality they would like. Within modeling, low quality means
+            playblasting the proxy, whereas high is the render. Here's an example of what it looks like in modeling:
+        </p>
+        <div class="multi-img-wrapper">
+            <img
+            src="/assets/images/turntable/model-low.png"
+            alt="model-low"
+            loading="lazy"
+            class="proj-img"
+            />
+            <img
+            src="/assets/images/turntable/model-high.png"
+            alt="model-high"
+            loading="lazy"
+            class="proj-img"
+            />
+        </div>
+        <p>
+            The artist can then click create, which will playblast the turntable and save the turntable video 
+            both locally and on our network (where all of our project files are stored) in that asset's 
+            directory of official files. Note that, in modeling, two playblasts are made: one with wireframe
+            and one without. These are then merged together into one video to create the final turntable.
+            <br></br>
+            Within surfacing, there are still two different quality options for the turntable but the 
+            settings are for rendering each frame of the turntable. Again, the artist clicks create, which 
+            will render the surfacing frames, combine all the frames together to create the video, then save 
+            the turntable video both locally and on our network in that asset's directory of official files.
+            Here's an example of what it looks like in surfacing:
+        </p> 
+        <div class="multi-img-wrapper">
+            <img
+            src="/assets/images/turntable/surfacing-low.png"
+            alt="surfacing-low"
+            loading="lazy"
+            class="proj-img"
+            />
+            <img
+            src="/assets/images/turntable/surfacing-high.png"
+            alt="surfacing-high"
+            loading="lazy"
+            class="proj-img"
+            />
+        </div>
+        <p></p>
+      </section>
+      <!-- Footer -->
+      <footer class="social-footer">
+        <div class="social-footer-icons">
+          <ul>
+            <li><a href="mailto:kpm.mendez@gmail.com" class="fa fa-envelope"></a></li>
+            <li><a href="https://linkedin.com/in/kellyn-mendez" class="fa fa-linkedin"></a></li>
+            <li><a href="https://github.com/kellynmendez" class="fa fa-github"></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- Website scripts -->
+    <script src="/assets/js/app.js"></script>
+    <!-- Ion icons scripts -->
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
