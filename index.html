@@ -26,250 +26,61 @@
             <ion-icon class="bars" name="menu-outline"></ion-icon>
           </button>
         </nav>
-        <!----------------------- PROGRAMMING PROJECTS ----------------------->
         <section class="projects" id="projects">
-          <h2> Programming Projects | Games and Animation</h2>
-          <div class="projects-container">
-            <!-------- ANIMATION LAB -------->
-            <div class="project-details-container project-card" onclick="openPage('/projects/animation-lab.html')">
-              <div class="image-container">
-                <p> August 2022 - Present </p>
+          <p><br></br></p>
+          <h2>My Work</h2>
+          <div class="vert-projs-container">
+            <!-------- TECHNICAL DRIECTOR / TOOLS DEV -------->
+            <div class="vertical-proj-details-container project-card" onclick="openPage('/projects/td-work.html')">
+              <div class="image-container vert-img-wrapper">
                 <img
-                src="/assets/images/usd-manager.png"
-                alt="bad-timing"
-                  loading="lazy"
-                  class="project-pic" 
-                />
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">UTD Animation Lab | Lead Technical Director</h3>
-                <p>
-                  I have worked as a TD in Animation Lab for nearly three years, and in that time I have worked on 
-                  three finished animated shorts. My job as technical director is to maintain the pipeline and 
-                  develop tools for the artists. My most major contribution has been creating, designing, and automating 
-                  our assembly pipeline using Universal Scene Description (USD).
-                </p>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card">Maya</div>
-                  <div class="proj-skills-card">PyQt</div>
-                  <div class="proj-skills-card">ShotGrid</div>
-                  <div class="proj-skills-card large-proj-skills-card">Unreal 5</div>
-                </div>
-              </div>
-            </div>
-            <!-------- SPIDERMAN MINIGAME -------->
-            <div class="project-details-container project-card" onclick="openPage('/projects/circuit-mini-game.html')">
-              <div class="image-container">
-                <p> November 2022 </p>
-                <img
-                src="/assets/images/spiderman-circuits.png"
-                alt="spiderman"
+                src="/assets/images/proj-mgr.png"
+                alt="project-manager"
                   loading="lazy"
                   class="project-pic"
                 />
               </div>
-              <div class="project-details">
-                <h3 class="project-title">Spider-Man Circuit Board Mini Game Remake</h3>
+              <div class="project-details vert-txt-wrapper">
+                <h3 class="project-title">Pipeline and Tools Dev</h3>
                 <p>
-                  A remake of the circuit board mini game from the video game Spider-Man.
-                  This game was a solo programming project created in Unity 2D, and all art was drawn using Procreate. 
+                  My pipeline TD work plus miscellaneous solo tool projects.
                 </p>
-                <a href="https://github.com/kellynmendez/circuit-board-puzzle" class="project-link">Github Repo</a>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card">Unity</div>
-                  <div class="proj-skills-card">C#</div>
-                  <div class="proj-skills-card large-proj-skills-card">Procreate</div>
-                </div>
               </div>
             </div>
-            <!-------- FLEABAG -------->
-            <div class="project-details-container project-card" onclick="openPage('/projects/fleabag.html')">
-              <div class="image-container">
-                <p> September 2022 </p>
+            <!-------- GAMES -------->
+            <div class="vertical-proj-details-container project-card" onclick="openPage('/projects/games-work.html')">
+              <div class="image-container vert-img-wrapper">
+                  <img
+                  src="/assets/images/turntable/turntable.png"
+                  alt="turntable"
+                    loading="lazy"
+                    class="project-pic"
+                  />
+              </div>
+              <div class="project-details vert-txt-wrapper">
+                <h3 class="project-title">Games</h3>
+                <p>
+                  Games I've made!
+                </p>
+              </div>
+            </div>
+            <!-------- ART -------->
+            <div class="vertical-proj-details-container project-card" onclick="openPage('/projects/art-work.html')">
+              <div class="image-container vert-img-wrapper">
                 <img
-                src="/assets/images/fleabag.png"
-                alt="fleabag"
+                src="/assets/images/proj-mgr.png"
+                alt="project-manager"
                   loading="lazy"
                   class="project-pic"
                 />
               </div>
-              <div class="project-details">
-                <h3 class="project-title">SGDA 40-Hour Game Jam | Fleabag</h3>
+              <div class="project-details vert-txt-wrapper">
+                <h3 class="project-title">Art</h3>
                 <p>
-                  A 2D arcade-style game created for the Student Game Developer Association's 
-                  Fall 40-Hour Game Jam, where the theme was "One's Trash is Another's Treasure." I worked
-                  as the main programmer on a team of six, in which I programmed the UI, player behavior, and
-                  more.
+                  Art
                 </p>
-                <a href="https://wlaroos.itch.io/fleabag" class="project-link">itch.io</a>
-                <a href="https://github.com/kellynmendez/sgda-game-jam-fall22" class="project-link">Github Repo</a>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card">Unity</div>
-                  <div class="proj-skills-card">C#</div>
-                </div>
               </div>
             </div>
-            <!-------- MAYA STACKER TOOL -------->
-            <div class="project-details-container project-card" onclick="openPage('/projects/stacker-tool.html')">
-              <div class="image-container">
-                <p> Spring 2022 </p>
-                <img
-                  src="/assets/images/stacker.png"
-                  alt="maya-stacker-tool"
-                  loading="lazy"
-                  class="project-pic"
-                />
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Maya Object Stacker Tool</h3>
-                <p>
-                  A tool that allows a Maya user to stack selected objects in any order and at 
-                  a specified height and separation. A user can also choose to give an XML file with position 
-                  information that will move each stack to its specified position.
-                </p>
-                <a href="https://github.com/kellynmendez/maya-object-stacker-tool" class="project-link">Github Repo</a>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card">Maya</div>
-                  <div class="proj-skills-card">PyQt</div>
-                </div>
-              </div>
-            </div>
-            <!-------- REVENGE OF THE ROOMBAS -------->
-            <div class="project-details-container project-card" onclick="openPage('/projects/revenge-of-roombas.html')">
-              <div class="image-container">
-                <p> March 2022 </p>
-                <img
-                src="/assets/images/roomba.jpg"
-                alt="revenge-of-the-roombas"
-                  loading="lazy"
-                  class="project-pic"
-                />
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">SGDA Arcade Jam | Revenge of the Roombas</h3>
-                <p>
-                  A 3D arcade-style game created in Unity for the Student Game Developer Assocation's Arcade Jam. 
-                  I worked as one of the programmers on a team of five, in which I proogrammed the UI and helped 
-                  write the roomba enemy AI.
-                </p>
-                <a href="https://amendez.itch.io/revenge-of-the-roombas" class="project-link">itch.io</a>
-                <a href="https://github.com/nicolasmaclean/arcade-jam" class="project-link">Github Repo</a>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card">Unity</div>
-                  <div class="proj-skills-card">C#</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!----------------------- ART AND DESIGN PROJECTS ----------------------->
-          <h2>Art and Design Projects</h2>
-          <div class="projects-container">
-            <!-------- BOOK ENVIRONMENT -------->
-            <div class="project-details-container project-card" onclick="openPage('/projects/book-environment.html')">
-              <div class="image-container">
-                <p> August 2023 </p>
-                <img
-                src="/assets/images/book-env-imgs/book-env-render.png"
-                alt="forest-env-render"
-                  loading="lazy"
-                  class="project-pic"
-                />
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Bookworm Virtual Environment</h3>
-                <p>
-                  A realistic virtual environment of a desk piled with books, with all assets modeled in Maya, 
-                  textured in Substance Painter, and rendered in Unreal 5.
-                </p>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card">Unreal 5</div>
-                  <div class="proj-skills-card">Maya</div>
-                  <div class="proj-skills-card large-proj-skills-card">Substance</div>
-                  <div class="proj-skills-card large-proj-skills-card">Procreate</div>
-                </div>
-              </div>
-            </div>
-            <!-------- STYLIZED FOREST ENVIRONMENT -------->
-            <div class="project-details-container project-card" onclick="openPage('/projects/forest-environment.html')">
-              <div class="image-container">
-                <p> July 2023 </p>
-                <img
-                src="/assets/images/forest-env-imgs/forest-final-env.png"
-                alt="forest-env-render"
-                  loading="lazy"
-                  class="project-pic"
-                />
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Stylized Forest Virtual Environment</h3>
-                <p>
-                  A virtual environment of a forest, featuring hand-painted textures using Procreate and Photoshop 
-                  as well as stylized textures created in Substance Painter, rendered in Unreal 5.
-                </p>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card">Unreal 5</div>
-                  <div class="proj-skills-card">Maya</div>
-                </div>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card large-proj-skills-card">Substance</div>
-                  <div class="proj-skills-card large-proj-skills-card">Procreate</div>
-                  <div class="proj-skills-card large-proj-skills-card">Photoshop</div>
-                </div>
-              </div>
-            </div>
-            <!-------- TREASURE CHEST MODEL -------->
-            <!--------
-            <div class="project-details-container project-card" onclick="openPage('/projects/treasure-chest.html')">
-              <div class="image-container">
-                <p> June 2022 </p>
-                <img
-                src="/assets/images/treasure-chest.jpg"
-                alt="treasure-chest"
-                  loading="lazy"
-                  class="project-pic"
-                />
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Treasure Chest Model | Maya</h3>
-                <p>
-                  My first modeling project, a 3D model of a treasure chest made in Maya.
-                </p>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card">Maya</div>
-                </div>
-              </div>
-            </div>
-            -------->
-            <!-------- ENCHANTED FOREST RACING GAME -------->
-            <!--------
-            <div class="project-details-container project-card">
-              <div class="image-container">
-                <p> Fall 2021 </p>
-                <img
-                  src="/assets/images/racing-game.png"
-                  alt="racing-game"
-                  loading="lazy"
-                  class="project-pic"
-                />
-              </div>
-              <div class="project-details">
-                <h3 class="project-title">Enchanted Forest Racing Game</h3>
-                <p>
-                  This game has an intro scene of a car that I did the modeling, surfacing, rigging, animation,
-                  and lighting for. I then designed the level and the environment, 
-                  modeled and textured the crystals and toadstools, then set up all special effects and 
-                  animations.
-                </p>
-                <a href="/projects/racing-game.html" class="project-link">Learn More</a>
-                <div class="proj-skills-container">
-                  <div class="proj-skills-card">Maya</div>
-                  <div class="proj-skills-card large-proj-skills-card">Photoshop</div>
-                  <div class="proj-skills-card">Unity</div>
-                  <div class="proj-skills-card">C#</div>
-                </div>
-              </div>
-            </div>
-            -------->
           </div>
         </section>
       </div>
