@@ -28,12 +28,27 @@
         </nav>
         <section class="projects" id="projects">
           <br></br>
-          <h2> Pipeline TD Work and Solo Tool Projects </h2>
+          <h2> Pipeline TD Work </h2>
+          <section class="single-proj padding">
+            <p>
+              I have worked as a TD in Animation Lab for nearly three years, and in that time I have worked on 
+              three finished animated shorts: <i>Bad Timing</i> (2022), <i>Red Hat Ringo</i> (2022), and <i>Sunny</i> (2022). 
+              The short I am currently working on is <i>The Kraken's Tooth</i>, a fun dark comedy about fish pirates searching 
+              for treasure under the sea, which is set to premiere in December 2025.
+              <br></br>
+              My job as technical director is to maintain our pipeline and codebase, develop tools for the artists, and provide 
+              front-line support for troubleshooting any production problems that might arise. Our production pipeline uses Maya 
+              and its Python API for all disciplines (with the exception of <i>Red Hat Ringo</i>, where the lighting pipeline was
+              moved to Unreal 5) and uses Flow (ShotGrid/Shotgun) for asset and shot tracking. I have contributed many different 
+              tools and workflows to Animation Lab's pipeline since starting, some of which you can read more about below!
+              <br></br>
+              <a href="https://atec-animgames.com/anim-lab">Click here to learn more about Animation Lab's work.</a>
+            </p>
+          </section>
           <div class="projects-container">
-            <!-------- ANIMATION LAB -------->
-            <div class="project-details-container project-card" onclick="openPage('/projects/animation-lab.html')">
+            <!-------- USD Assembly Pipeline -------->
+            <div class="project-details-container project-card" onclick="openPage('/projects/td/usd-assembly-pipeline.html')">
               <div class="image-container">
-                <p> August 2022 - Present </p>
                 <img
                 src="/assets/images/usd-manager.png"
                 alt="bad-timing"
@@ -42,11 +57,11 @@
                 />
               </div>
               <div class="project-details">
-                <h3 class="project-title">Animation Lab | Lead Pipeline TD</h3>
+                <h3 class="project-title">USD Assembly Pipeline</h3>
                 <p>
-                  I have worked as a TD in Animation Lab for nearly three years, and in that time I have worked on 
-                  three finished animated shorts. My job as a TD is to maintain our production pipeline, improve our
-                  workflows, and develop tools for the artists.
+                  An assembly workflow that uses Universal Scene Description (USD) to 
+                  manage assemblies, including USD layer structure for set dressing as well as 
+                  assembly handling across all disciplines in a shot context.
                 </p>
                 <div class="proj-skills-container">
                   <div class="proj-skills-card">Maya</div>
@@ -59,10 +74,58 @@
                 </div>
               </div>
             </div>
-            <!-------- MAYA STACKER TOOL -------->
-            <div class="project-details-container project-card" onclick="openPage('/projects/stacker-tool.html')">
+            <!-------- Turntable Automator -------->
+            <div class="project-details-container project-card" onclick="openPage('/projects/td/turntable-automator.html')">
               <div class="image-container">
-                <p> Spring 2022 </p>
+                <img
+                  src="/assets/images/turntable/turntable.png"
+                  alt="turntable"
+                    loading="lazy"
+                    class="project-pic"
+                  />
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Turntable Automator</h3>
+                <p>
+                  For any given asset, this tool automates the creation of a turntable within both
+                  modeling and surfacing (with rendering done in Arnold) for easy look dev.
+                </p>
+                <div class="proj-skills-container">
+                  <div class="proj-skills-card">Maya</div>
+                  <div class="proj-skills-card">PyQt</div>
+                  <div class="proj-skills-card">ffmpeg</div>
+                </div>
+              </div>
+            </div>
+            <!-------- Project Manager -------->
+            <div class="project-details-container project-card" onclick="openPage('/projects/td/project-manager.html')">
+              <div class="image-container">
+                <img
+                src="/assets/images/proj-mgr.png"
+                alt="project-manager"
+                  loading="lazy"
+                  class="project-pic"
+                />
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Project Manager</h3>
+                <p>
+                  Tracks all assets and shots within the project, allowing user to view details about each,
+                  re-publish, change version, and more.
+                </p>
+                <div class="proj-skills-container">
+                  <div class="proj-skills-card">Maya</div>
+                  <div class="proj-skills-card">PyQt</div>
+                  <div class="proj-skills-card">ShotGrid</div>
+                </div>
+              </div>
+            </div>
+            <br></br>
+
+            <h2> Solo Tool Projects </h2>
+            <!-------- MAYA STACKER TOOL -------->
+            <div class="project-details-container project-card" onclick="openPage('/projects/td/stacker-tool.html')">
+              <div class="image-container">
                 <img
                   src="/assets/images/stacker.png"
                   alt="maya-stacker-tool"
