@@ -16,7 +16,7 @@
       <div class="content-wrap">
         <!-- Navbar -->
         <nav>
-          <h1>Kellyn Mendez</h1>
+          <a href="/about.html" class="nav-link"><h1>Kellyn Mendez</h1></a>
           <ul class="navigation">
             <li><a href="/about.html" class="nav-link">About</a></li>
             <!--<li><a href="/resume.html" class="nav-link">Resume</a></li>-->
@@ -28,24 +28,43 @@
         </nav>
       </div>
       <section class="single-proj padding">
-        <h1>SGDA Arcade Jam | The Revenge of the Roombas</h1>
-        <video width="320" height="240" controls>
-          <source src="/assets/videos/roomba-demo.mp4" type="video/mp4">
+        <h1>Maya Object Stacker Tool</h1>
+        <video width="320" height="240" controls autoplay loop>
+          <source src="/assets/videos/stacker-demo.mp4" type="video/mp4">
         </video>
         <p>
-          This game was made for the Student Game Developer Association's arcade jam in Spring 2022,
-          where the theme was "Combos." Our game won the award for "Best Technical Achievement."
+          This tool was created over the course of the Spring 2022 semester in my Scripting for Animation class as
+          an introduction to tools development. The object stacker tool creates stacks of objects, and objects for 
+          each part of the stack are randomly selected from groups of objects specified by the user. After creating
+          the stacks, a user can also provide an XML file with position information that will move each stack to 
+          its desired position.
           <br><br>
-          Prior to making <i>Revenge of the Roombas</i>, I had no experience with scripting 
-          in C# and how it works with Unity. But over the course of the week, I programmed the UI and 
-          helped write the enemy AI for the Roombas with one of my teammates. 
-          <br><br>
-          For the enemy AI, we created a StateMachine base class that
-          each of the three types of enemy Roombas (exploding, shooting, and wandering/seeking alternating) inherited to 
-          create each of their specific behaviors. The base class allowed the Roombas to transition between each 
-          enemy type's states (for example, the last Roomba enemy type alternates between seeking out the player and 
-          wandering aimlessly). 
+          This project was broken up into three parts over the course of the semester: stacking capability, draft GUI for
+          specifying object groups, and the final GUI with the XML file capability. To read through the code, view the Github repo 
+          <a href="https://github.com/kellynmendez">here</a>.
         </p>
+        <h3>First Pass GUI</h3>
+        <img
+        src="/assets/images/stacker-first-pass-gui.png"
+        alt="stacker-first-pass-gui"
+        loading="lazy"
+        class="single-proj-img"
+        />
+        <h3>Final GUI</h3>
+        <img
+        src="/assets/images/stacker-final-gui-no-treeview.png"
+        alt="stacker-final-gui-no-treeview"
+        loading="lazy"
+        class="single-proj-img"
+        />
+        <br></br>
+        <img
+        src="/assets/images/stacker-final-gui.png"
+        alt="stacker-final-gui"
+        loading="lazy"
+        class="single-proj-img"
+        />
+        <br></br>
       </section>
       <!-- Footer -->
       <footer class="social-footer">

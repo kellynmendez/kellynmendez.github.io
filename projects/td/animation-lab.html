@@ -16,7 +16,7 @@
       <div class="content-wrap">
         <!-- Navbar -->
         <nav>
-          <h1>Kellyn Mendez</h1>
+          <a href="/about.html" class="nav-link"><h1>Kellyn Mendez</h1></a>
           <ul class="navigation">
             <li><a href="/about.html" class="nav-link">About</a></li>
             <!--<li><a href="/resume.html" class="nav-link">Resume</a></li>-->
@@ -28,11 +28,27 @@
         </nav>
       </div>
       <section class="single-proj padding">
-        <h1>Technical Direction and Tool Development Work</h1>
+        <h1>UTD Animation Lab</h1>
         <p>
-          This is my work in progress page for my final capstone presentation.
+          I have worked as a TD in Animation Lab for nearly three years, and in that time I have worked on 
+          three finished animated shorts (<i>Bad Timing</i> (2022), <i>Red Hat Ringo</i> (2023), <i>Sunny</i> (2024)). 
+          My job as technical director is to maintain the pipeline and develop tools for the artists. My most major 
+          contribution has been designing and automating our assembly pipeline using Universal Scene Description (USD).
+          The short I am currently working on is called <i>The Kraken's Tooth</i>, a dark comedy about fish pirates
+          searching for treasure under the sea, with a premiere date in December 2025.
+          <br></br>
+          <a href="https://atec-animgames.com/anim-lab">Click here to learn more about animation lab.</a>
         </p>
         <h2>USD Assembly Pipeline</h2>
+        <p>
+          My main task since January 2023 has been to create an assembly workflow that uses Universal Scene 
+          Description (USD), a software platform developed by Pixar that manages 3D animation 
+          data efficiently, to handle managing assemblies and set dressing. I was tasked with designing a way for
+          layout artists to assemble a set using USD rather than our old Maya assembly workflow, and I did this by 
+          automating essential parts of the USD pipeline and creating a tool artists could use to easily 
+          manage the USD data in their layout. I have been working on this throughout production of <i>Red 
+          Hat Ringo</i> and <i>Sunny</i>.
+        </p>
         <h3>Asset Steps</h3>
         <ol type="1">
           <li style="padding-left:10px">The modeling team publishes their work which exports the proxy (and render, if it exists) 
@@ -127,6 +143,82 @@
         />
         <p>
           Above is a picture of the USD layer editor once it reaches the lighting discipline.
+        </p>
+        <h2>About Bad Timing</h2>
+        <!-- <img
+        src="/assets/images/bad-timing-title.png"
+        alt="bad-timing-title"
+        loading="lazy"
+        class="single-proj-img"
+        /> -->
+        <figure>
+          <video controls>
+            <source src="/assets/videos/BadTimingFinalVideo.mp4" type="video/mp4">
+          </video>
+          <figcaption>Our 2022 animated short, "Bad Timing"</figcaption>
+        </figure>
+        <p>
+          I joined Bad Timing for the second semester of its production, so the main focus for the semester was surfacing, 
+          rigging, animation, and lighting. Jumping straight into pipeline management with only a semester of previous
+          tools development experience was very challenging; my teammate and I were given the code for the main modules, and 
+          we spent a majority of our time for the first semester learning and experimenting with the pipeline.
+          We mostly focused on troubleshooting problems and bugs that artists ran into, especially for the last few weeks to get the final
+          short ready for the premiere, which was in December of 2022.
+          <br></br>
+          Beyond just troubleshooting, my teammate and I also worked on a way for surfacing artists to work locally. One of the
+          artists' biggest recurring problems is our network drive due to how slow it is to access files work on 
+          pipe. As a result, previous technical directors worked on ways to download files from the network so artists
+          could work on them locally then have them version back up to the network when they finish working. This workflow is much
+          simpler for a discipline like modeling, but with surfacing it was a little more involved because we needed to take into
+          account file dependencies and handle the workflow accordingly.
+          <br></br>
+          <a href="https://atec-animgames.com/badtiming">Click here to learn more about Bad Timing.</a>
+        </p>
+        <h2>About Red Hat Ringo</h2>
+        <!-- <figure>
+          <video controls>
+            <source src="/assets/videos/Red-Hat-Ringo.mp4" type="video/mp4">
+          </video>
+          <figcaption>Our 2023 animated short, "Red Hat Ringo"</figcaption>
+        </figure> -->
+        <img
+        src="/assets/images/red-hat-ringo.jpg"
+        alt="red-hat-ringo-title"
+        loading="lazy"
+        class="single-proj-img"
+        />
+        <p>
+          Production on our animated short Red Hat Ringo began in January 2023, and the short premiered in December
+          2023. Since the project has started, I have had a hand in automating the USD pipeline which we have used for layout starting in
+          the pre-production stage. As the project continues, I will expand the basic pipeline I have automated so far, aid in surfacing the
+          USD in Unreal 5, and continue to trouble-shoot general pipeline problems that the artists run into as the short begins to wrap up.
+          Since the short wrapped in December of 2023, it has been submitted and accepted into multiple festivals so I do not have 
+          permission to post it here yet.
+          <br></br>
+          <a href="https://www.atec-animgames.com/rhr-home">Click here to learn more about Red Hat Ringo.</a>
+        </p>
+        <h2>About Sunny</h2>
+        <!-- <figure>
+          <video controls>
+            <source src="/assets/videos/Red-Hat-Ringo.mp4" type="video/mp4">
+          </video>
+          <figcaption>Our 2023 animated short, "Red Hat Ringo"</figcaption>
+        </figure> -->
+        <img
+        src="/assets/images/sunny.jpg"
+        alt="sunny-title"
+        loading="lazy"
+        class="single-proj-img"
+        />
+        <p>
+          Sunny's production began in January 2024, and the short will be finished and premiered in December 2024. 
+          Since the project has started, I have been continuing to update and add to the USD assembly pipeline, which is now being
+          used in lighting. Things I have added include importing the right assembly into shots across disciplines, as well
+          as texturing the assembly in lighting. I have also done a lot of maintenance and troubleshooting on our pipeline, 
+          which has mostly consisted of updating animation, layout, and surfacing publish code, as well as smoothing out USD errors
+          as they pop up.
+          <br></br>
+          <a href="https://www.atec-animgames.com/sunny-home">Click here to learn more about Sunny.</a>
         </p>
       </section>
       <!-- Footer -->

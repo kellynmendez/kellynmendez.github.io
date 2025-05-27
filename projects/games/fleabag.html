@@ -16,7 +16,7 @@
       <div class="content-wrap">
         <!-- Navbar -->
         <nav>
-          <h1>Kellyn Mendez</h1>
+          <a href="/about.html" class="nav-link"><h1>Kellyn Mendez</h1></a>
           <ul class="navigation">
             <li><a href="/about.html" class="nav-link">About</a></li>
             <!--<li><a href="/resume.html" class="nav-link">Resume</a></li>-->
@@ -28,43 +28,28 @@
         </nav>
       </div>
       <section class="single-proj padding">
-        <h1>Maya Object Stacker Tool</h1>
-        <video width="320" height="240" controls autoplay loop>
-          <source src="/assets/videos/stacker-demo.mp4" type="video/mp4">
+        <h1>SGDA 40-Hour Game Jam | Fleabag</h1>
+        <video width="320" height="240" controls>
+          <source src="/assets/videos/fleabag.mp4" type="video/mp4">
         </video>
         <p>
-          This tool was created over the course of the Spring 2022 semester in my Scripting for Animation class as
-          an introduction to tools development. The object stacker tool creates stacks of objects, and objects for 
-          each part of the stack are randomly selected from groups of objects specified by the user. After creating
-          the stacks, a user can also provide an XML file with position information that will move each stack to 
-          its desired position.
+          This game was made for the Student Game Developer Association's 40-hour game jam in Spring 2022,
+          where the theme was "One's Trash is Another's Treasure." Our game won the award for "Best Audio."
+          In <i>Fleabag</i>, you play as a racoon that has to collect as much trash as possible before being
+          killed by the hordes of rats. You also have the option to light a trash can instead of loot it, and
+          lighting a trash can will keep rats away from you until the trash can burns out.
           <br><br>
-          This project was broken up into three parts over the course of the semester: stacking capability, draft GUI for
-          specifying object groups, and the final GUI with the XML file capability. To read through the code, view the Github repo 
-          <a href="https://github.com/kellynmendez">here</a>.
+          For this game, I had a hand in programming everything except for the enemy AI of the rats, but I would say my
+          two biggest contributions were programming the UI as well as player behavior.
+          <br><br>
+          As an overview in regards to player behavior, the racoon had to be able to move into position in front of a trash can then dig through it
+          whenever a button was held down. To do this, I had to account for how to choose the trach can when the racoon
+          is within the collider of multiple trash cans at once, and I had to lock all controls while the racoon is digging.
+          To accomplish this, the player controller script uses states to know when the racoon is digging or not, and it keeps
+          a list of trash bins that the racoon is within range of, so when the button for digging is held, it calculates the
+          closest trash can and uses coroutines to move the racoon in front of the trash can and start the digging time. The
+          trash cans themselves also have a state machine set up to move them between ready, looting/lit, and recharging states.
         </p>
-        <h3>First Pass GUI</h3>
-        <img
-        src="/assets/images/stacker-first-pass-gui.png"
-        alt="stacker-first-pass-gui"
-        loading="lazy"
-        class="single-proj-img"
-        />
-        <h3>Final GUI</h3>
-        <img
-        src="/assets/images/stacker-final-gui-no-treeview.png"
-        alt="stacker-final-gui-no-treeview"
-        loading="lazy"
-        class="single-proj-img"
-        />
-        <br></br>
-        <img
-        src="/assets/images/stacker-final-gui.png"
-        alt="stacker-final-gui"
-        loading="lazy"
-        class="single-proj-img"
-        />
-        <br></br>
       </section>
       <!-- Footer -->
       <footer class="social-footer">

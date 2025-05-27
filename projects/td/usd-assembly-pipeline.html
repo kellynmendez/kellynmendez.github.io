@@ -16,7 +16,7 @@
       <div class="content-wrap">
         <!-- Navbar -->
         <nav>
-          <h1>Kellyn Mendez</h1>
+          <a href="/about.html" class="nav-link"><h1>Kellyn Mendez</h1></a>
           <ul class="navigation">
             <li><a href="/about.html" class="nav-link">About</a></li>
             <!--<li><a href="/resume.html" class="nav-link">Resume</a></li>-->
@@ -30,12 +30,14 @@
       <section class="single-proj padding">
         <h1>USD Assembly Pipeline</h1>
         <p>
-          <!--My main task in Animation Lab since January 2023 has been to working on an assembly workflow that uses 
-          Universal Scene Description (USD) to handle managing assemblies and set dressing. -->I was tasked with designing 
-          a way for layout artists to assemble a set using USD rather than our old Maya assembly workflow, and I did 
-          this by automating essential parts of the USD pipeline and creating a tool artists could use to easily 
-          manage the USD data in their layout. <!--I have been working on this throughout production of <i>Red 
-          Hat Ringo</i> and <i>Sunny</i>.-->
+          My main task in Animation Lab since January 2023 has been to working on an assembly workflow that uses 
+          Universal Scene Description (USD) to handle assemblies and set dressing. I was tasked with designing 
+          a way for set dressers to assemble a set using USD (rather than our old Maya assembly workflow), and I did 
+          this by automating essential parts of importing prims/layering the USDs, creating a tool artists could 
+          use to easily manage the USD data in their set, and automating pulling those sets into shots across all 
+          disciplines. To date, this pipeline has been used in production of <i>Red Hat Ringo</i> (which used Unreal 
+          for lighting and Maya for all other disciplines) and <i>Sunny</i> (which used Maya for all production disciplines).
+          Keep reading for a full breakdown of how USD data is handled throughout the pipeline!
         </p>
         <div class="multi-img-wrapper">
           <div class="proj-img">
@@ -67,7 +69,7 @@
         />
         <figcaption>Final rendered shot of Sunny</figcaption>
         <br></br>
-        <h3>Asset Steps</h3>
+        <h2>Asset Steps</h2>
         <ol type="1">
           <li style="padding-left:10px">The modeling team publishes their work which exports the proxy (and render, if it exists) 
             versions of the model to USD and stores them on the network.</li> 
@@ -87,7 +89,7 @@
           loading="lazy"
           class="code-img"
           />
-          <li style="padding-left:10px">The layout artist uses the USD Manager tool to add and remove assets to the USD, then they can 
+          <li style="padding-left:10px">The set dressers use the USD Manager tool to add and remove assets to the USD, then they can 
             move them around as needed.</li>
           <br></br>
           <img
@@ -98,8 +100,8 @@
           />
           <br></br>
           <ol type="a">
-            <li style="margin-left:50px; padding-left:10px">The tool queries ShotGrid to gather project data and assemble a list of all
-              assets in the project, with icons that indicate whether an assembly is able to pull in that asset.</li>
+            <li style="margin-left:50px; padding-left:10px">The tool queries ShotGrid to gather project data and assemble a list of all a
+              ssets in the project, with icons that indicate whether an assembly is able to pull in that asset.</li>
             <ol type="i">
               <li style="margin-left:100px; padding-left:10px">Green icons indicate that the asset's USD file exists on the network so 
                 the artist can therefore import the asset into their assembly.</li> 
@@ -133,7 +135,7 @@
             set on the assembly as per what they use (layout has proxies, animation and lighting have renders).</li> 
         </ol>
         <br></br>
-        <h3>Shot Steps</h3>
+        <h2>Shot Steps</h2>
         <ol type="1">
           <li style="padding-left:10px"> 
             Layout imports the assembly they are assigned into their shot (in the future 
