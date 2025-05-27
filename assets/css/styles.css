@@ -386,6 +386,14 @@ video {
   padding: 0rem 1rem;
 }
 
+.single-proj figcaption {
+  font-family: var(--font-family-2);
+  font-size: 0.9rem;
+  text-align: center;
+  font-style: italic;
+  padding: 0rem 1rem;
+}
+
 .single-proj .center-text p {
   text-align: center;
   font-size: 1.2rem;
@@ -449,6 +457,10 @@ video {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.vertical-card-shorter {
+  height: 20rem;
 }
 
 .vertical-proj-details-container img {
