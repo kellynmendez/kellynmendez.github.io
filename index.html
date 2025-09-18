@@ -18,22 +18,124 @@
         <nav>
           <a href="/about.html" class="nav-link"><h1>Kellyn Mendez</h1></a>
           <ul class="navigation">
-            <li><a href="/about.html" class="nav-link">About</a></li>
+            <li><a href="/index.html" class="nav-link">About</a></li>
             <!--<li><a href="/resume.html" class="nav-link">Resume</a></li>-->
-            <li><a href="/index.html" class="nav-link">Projects</a></li>
+            <li><a href="/projects.html" class="nav-link">All Projects</a></li>
           </ul>
           <button class="burger-menu" id="burger-menu">
             <ion-icon class="bars" name="menu-outline"></ion-icon>
           </button>
         </nav>
-        <section class="projects" id="projects">
-          <br></br>
-          <h2>My Work</h2>
-          <br></br>
-          <div class="vert-projs-container">
-            <!-------- TECHNICAL DRIECTOR / TOOLS DEV -------->
-            <div class="vertical-proj-details-container vertical-card-shorter project-card" onclick="openPage('/td-work.html')">
-              <div class="image-container vert-img-wrapper">
+        <!-- Short Intro -->
+        <section class="short-intro" id="about">
+          <img
+            src="/assets/images/km-headshot.jpeg"
+            alt="kellyn-mendez-headshot"
+          />
+          <div class="bio">
+            <h2 class="bio-title">Hello! My name is <span>Kellyn Mendez</span>.</h2>
+            <p class="bio-text single-proj padding">
+              I am a Pipeline TD and Software Engineer passionate about applying programming in both technical and 
+              creative environments, whether it be game development or animation.
+            </p>
+          </div>
+        </section>
+        <br></br>
+        <br></br>
+        <!-- About -->
+        <section class="more-about single-proj padding">
+          <h1>Skills</h1>
+          <div class="columns-3">
+            <div class="column">
+              <h4>Languages</h4>
+              <ul style="list-style-type:disc;">
+                <li>Python</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>C/C++</li>
+                <li>MEL</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h4>Frameworks and More</h4>
+              <ul style="list-style-type:disc;">
+                <li>Pyside/PyQt</li>
+                <li>Universal Scene Description (USD)</li>
+                <li>Maya Python API</li>
+                <li>Unreal Python API</li>
+                <li>Flow (Shotgrid) API</li>
+              </ul>
+            </div>
+            <div class="column"> 
+              <h4>Softwares</h4>
+              <ul style="list-style-type:disc;">
+                <li>Maya</li>
+                <li>Unreal</li>
+                <li>Unity</li>
+                <li>Photoshop</li>
+                <li>Substance Painter</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="projects" id="projects">
+          <h2> Pipeline TD Experience </h2>
+          <div class="projects-container">
+            <!-------- USD Assembly Pipeline -------->
+            <div class="project-details-container project-card" onclick="openPage('/projects/td/usd-assembly-pipeline.html')">
+              <div class="image-container">
+                <img
+                src="/assets/images/usd-manager.png"
+                alt="bad-timing"
+                  loading="lazy"
+                  class="project-pic" 
+                />
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">USD Assembly Pipeline</h3>
+                <p>
+                  An assembly workflow that uses Universal Scene Description (USD) to 
+                  manage assemblies, including USD layer structure for set dressing as well as 
+                  assembly handling across all disciplines in a shot context.
+                </p>
+                <div class="proj-skills-container">
+                  <div class="proj-skills-card">Maya</div>
+                  <div class="proj-skills-card">PyQt</div>
+                  <div class="proj-skills-card">ShotGrid</div>
+                </div>
+                <div class="proj-skills-container">
+                  <div class="proj-skills-card large-proj-skills-card">Unreal 5</div>
+                  <div class="proj-skills-card">USD</div>
+                </div>
+              </div>
+            </div>
+            <!-------- Turntable Automator -------->
+            <div class="project-details-container project-card" onclick="openPage('/projects/td/turntable-automator.html')">
+              <div class="image-container">
+                <img
+                  src="/assets/images/turntable/turntable.png"
+                  alt="turntable"
+                    loading="lazy"
+                    class="project-pic"
+                  />
+              </div>
+              <div class="project-details">
+                <h3 class="project-title">Turntable Automator</h3>
+                <p>
+                  For any given asset, this tool automates the creation of a turntable within both
+                  modeling and surfacing (with rendering done in Arnold) for easy look dev.
+                </p>
+                <div class="proj-skills-container">
+                  <div class="proj-skills-card">Maya</div>
+                  <div class="proj-skills-card">PyQt</div>
+                  <div class="proj-skills-card">ffmpeg</div>
+                </div>
+              </div>
+            </div>
+            <!-------- Project Manager -------->
+            <div class="project-details-container project-card" onclick="openPage('/projects/td/project-manager.html')">
+              <div class="image-container">
                 <img
                 src="/assets/images/proj-mgr.png"
                 alt="project-manager"
@@ -41,50 +143,48 @@
                   class="project-pic"
                 />
               </div>
-              <div class="project-details vert-txt-wrapper">
-                <h3 class="project-title">Pipeline and Tools Dev</h3>
+              <div class="project-details">
+                <h3 class="project-title">Project Manager</h3>
                 <p>
-                  Pipeline TD work and miscellaneous solo tools.
+                  Tracks all assets and shots within the project, allowing user to view details about each,
+                  re-publish, change version, and more.
                 </p>
+                <div class="proj-skills-container">
+                  <div class="proj-skills-card">Maya</div>
+                  <div class="proj-skills-card">PyQt</div>
+                  <div class="proj-skills-card">ShotGrid</div>
+                </div>
               </div>
             </div>
-            <!-------- GAMES -------->
-            <div class="vertical-proj-details-container  vertical-card-shorter project-card" onclick="openPage('/projects/games-work.html')">
-              <div class="image-container vert-img-wrapper">
-                  <img
-                  src="/assets/images/games/granny-smith.png"
-                  alt="turntable"
-                    loading="lazy"
-                    class="project-pic"
-                  />
-              </div>
-              <div class="project-details vert-txt-wrapper">
-                <h3 class="project-title">Games</h3>
-                <p>
-                  Game jams, personal projects, and more.
-                </p>
-              </div>
-            </div>
-            <!-------- ART -------->
-            <div class="vertical-proj-details-container vertical-card-shorter project-card" onclick="openPage('/projects/art-work.html')">
-              <div class="image-container vert-img-wrapper">
+            <!-------- MAYA STACKER TOOL -------->
+            <div class="project-details-container project-card" onclick="openPage('/projects/td/stacker-tool.html')">
+              <div class="image-container">
                 <img
-                src="/assets/images/book-env-imgs/book-env-render.png"
-                alt="project-manager"
+                  src="/assets/images/stacker.png"
+                  alt="maya-stacker-tool"
                   loading="lazy"
                   class="project-pic"
                 />
               </div>
-              <div class="project-details vert-txt-wrapper">
-                <h3 class="project-title">Art</h3>
+              <div class="project-details">
+                <h3 class="project-title">Maya Object Stacker Tool</h3>
                 <p>
-                  Beyond programming, I also like creating 3D environments!
+                  A tool that allows a Maya user to stack selected objects in any order and at 
+                  a specified height and separation. A user can also choose to give an XML file with position 
+                  information that will move each stack to its specified position.
                 </p>
+                <a href="https://github.com/kellynmendez/maya-object-stacker-tool" class="project-link">Github Repo</a>
+                <div class="proj-skills-container">
+                  <div class="proj-skills-card">Maya</div>
+                  <div class="proj-skills-card">PyQt</div>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </div>
+      <br></br>
+      <br></br>
       <!-- Footer -->
       <footer class="social-footer">
         <div class="social-footer-icons">
