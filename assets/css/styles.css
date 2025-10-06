@@ -141,18 +141,18 @@ nav ul li {
 
 /* Continued about section */
 
-.more-about {
+.gray-bkgrd {
   background-color: var(--bg-color);
   padding: 1rem 3rem;
 }
 
-.more-about h2 {
+.gray-bkgrd h2 {
   font-family: var(--font-family-2);
   margin-bottom: var(--bottom-margin);
   text-align: center;
 }
 
-.more-about p {
+.gray-bkgrd p {
   font-family: var(--font-family-2);
   line-height: var(--line-height);
   padding: 0.4rem;
@@ -230,7 +230,7 @@ nav ul li {
   color: #5550b0;
 }
 
-.more-about h4 {
+.gray-bkgrd h4 {
   font-family: var(--font-family-4);
   font-size: 1.1rem;
   text-align: center;
@@ -533,6 +533,7 @@ footer {
 
 .content-wrap {
   padding-bottom: 2.5rem;
+  flex: 1;
 }
 
 .page-container {
@@ -624,16 +625,16 @@ footer ul {
     width: 18rem;
   }
 
-  .more-about {
+  .gray-bkgrd {
     margin-top: 2rem;
     padding: 1rem 3.5rem;
   }
 
-  .more-about h2 {
+  .gray-bkgrd h2 {
     text-align: center;
   }
 
-  .more-about p {
+  .gray-bkgrd p {
     text-align: justify;
   }
 

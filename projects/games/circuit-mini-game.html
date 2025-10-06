@@ -14,18 +14,8 @@
   <body>
     <div class="page-container">
       <div class="content-wrap">
-        <!-- Navbar -->
-        <nav>
-          <a href="/index.html" class="nav-link"><h1>Kellyn Mendez</h1></a>
-          <ul class="navigation">
-            <li><a href="/index.html" class="nav-link">About</a></li>
-            <!--<li><a href="/resume.html" class="nav-link">Resume</a></li>-->
-            <li><a href="/projects.html" class="nav-link">All Projects</a></li>
-          </ul>
-          <button class="burger-menu" id="burger-menu">
-            <ion-icon class="bars" name="menu-outline"></ion-icon>
-          </button>
-        </nav>
+        <!-- Header/Navbar -->
+        <div id="header"></div>
       </div>
       <section class="single-proj padding">
         <h1>Spider-Man Circuit Board Mini Game Remake</h1>
@@ -68,16 +58,17 @@
         </p>
       </section>
       <!-- Footer -->
-      <footer class="social-footer">
-        <div class="social-footer-icons">
-          <ul>
-            <li><a href="mailto:kpm.mendez@gmail.com" class="fa fa-envelope"></a></li>
-            <li><a href="https://linkedin.com/in/kellyn-mendez" class="fa fa-linkedin"></a></li>
-            <li><a href="https://github.com/kellynmendez" class="fa fa-github"></a></li>
-          </ul>
-        </div>
-      </footer>
+      <div id="footer"></div>
     </div>
+    <!-- Dynamic Header and Footer -->
+    <script>
+        fetch('/comps/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('/comps/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
     <!-- Website scripts -->
     <script src="/assets/js/app.js"></script>
     <!-- Ion icons scripts -->
