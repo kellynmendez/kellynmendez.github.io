@@ -90,15 +90,22 @@
     </div>
     <!-- Dynamic Header and Footer -->
     <script>
-        fetch('/comps/header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data);
-        fetch('/comps/footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
+      fetch('/comps/header.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('header').innerHTML = data;
+              // Now that the header is loaded, run app.js
+              const script = document.createElement('script');
+              script.src = '/assets/js/app.js';
+              document.body.appendChild(script); // Append the script to the body so it runs
+          });
+
+      fetch('/comps/footer.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer').innerHTML = data;
+          });
     </script>
-    <!-- Website scripts -->
-    <script src="/assets/js/app.js"></script>
     <!-- Ion icons scripts -->
     <script
     type="module"
