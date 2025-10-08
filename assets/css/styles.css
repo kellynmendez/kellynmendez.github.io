@@ -102,15 +102,32 @@ nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
-  max-width: 68.75rem;
+  gap: 1.5rem;
+  max-width: 57rem;
   margin: auto;
 }
 
+.short-intro-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .short-intro img {
-  margin: 2rem 2rem 2rem 2rem;
-  height: 20rem;
-  width: 20rem;
+  max-width: 100%;
+  height: auto;
+  width: 16rem;
+  flex-shrink: 0;
+  border-radius: 6px;
+  margin: 1rem;
+}
+
+.bio-divider {
+  border: none;
+  border-top: 1px solid var(--primary-shadow);  /* Matches the bio box shadow color */
+  width: 95%;
+  margin: 0.4rem auto;
 }
 
 .bio {
@@ -127,11 +144,31 @@ nav ul li {
   font-size: 1.6rem;
 }
 
-.bio p {
+.bio h3 {
   font-family: var(--font-family-1);
   line-height: var(--line-height);
   font-size: 1.2rem;
   padding: 0.3rem 0;
+  font-weight: normal;
+}
+
+.bio p {
+  font-family: var(--font-family-1);
+  line-height: var(--line-height);
+  font-size: 1rem;
+  padding: 0.5rem 0rem 0rem 0rem;
+  font-weight: bold;
+}
+
+.bio ul {
+  list-style-type: disc;
+  padding: 0rem 1rem;
+}
+
+.bio li {
+  font-family: var(--font-family-1);
+  line-height: var(--line-height);
+  font-size: 1rem;
 }
 
 .bio span {
@@ -540,6 +577,20 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* spacing between icons */
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: #4f49ca;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .social-footer {
