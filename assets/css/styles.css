@@ -127,7 +127,7 @@ nav ul li {
   border: none;
   border-top: 1px solid var(--primary-shadow);  /* Matches the bio box shadow color */
   width: 95%;
-  margin: 0.4rem auto;
+  margin: 0.8rem auto;
 }
 
 .bio {
@@ -156,7 +156,6 @@ nav ul li {
   font-family: var(--font-family-1);
   line-height: var(--line-height);
   font-size: 1rem;
-  padding: 0.5rem 0rem 0rem 0rem;
   font-weight: bold;
 }
 
